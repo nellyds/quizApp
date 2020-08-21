@@ -37,7 +37,6 @@ export default new Vuex.Store({
       this.state.incompleteQuestions.push(payload.data);
     },
     clearIncompleteQuestions() {
-      window.alert("reached");
       this.state.incompleteQuestions = [];
     },
     setQuizLength(state, payload) {

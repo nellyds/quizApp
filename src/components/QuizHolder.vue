@@ -62,7 +62,7 @@ export default {
       }
     },
     validateAllQuestionsFilled: function() {
-      for (let i = 0; i < this.testLength; i++) {
+      for (let i = 0; i < this.quizLength; i++) {
         if (!this.submittedAnswers.includes(i)) {
           this.$store.commit({
             type: "addIncompleteQuestion",

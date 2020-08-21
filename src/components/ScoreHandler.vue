@@ -1,6 +1,8 @@
 <template>
   <div>
-    <p>{{ correctAnswer }}</p>
+    <p v-if="correctAnswer != null">
+      You got {{ correctAnswer }} / {{ quizLength }} correct.
+    </p>
   </div>
 </template>
 <script>
@@ -10,7 +12,10 @@ export default {
   },
   computed: {
     correctAnswer: function() {
-      return this.$store.state.correctAnswer;
+      return this.$store.state.correctAnswer.legnth;
+    },
+    quizLength: function() {
+      return this.$store.state.quizLength;
     }
   }
 };

@@ -8,12 +8,11 @@
         {{ questionQuote }}
       </p>
       <v-radio-group v-model="radioValue">
-        <v-radio
-          v-for="(quote, i) in quotes"
-          :key="i"
-          :label="quote.person"
-          :value="quote.person"
-        ></v-radio>
+        <div v-for="(quote, i) in quotes" v-bind:id=quote.person  :key="i">
+          <v-radio 
+          :label="quote.person" 
+          :value="quote.person"></v-radio>
+        </div>
       </v-radio-group>
       <p
         class="youAreCorrect"
@@ -97,7 +96,10 @@ export default {
             type: "submitCorrectAnswer",
             data: this.questionNumber
           });
-        } else this.isWrong = true;
+        } else {
+          this.isWrong = true;
+         document.getElementById(this.answerName).style["background-color"] = "green"
+       }
       }
     },
     incompleteQuestions: function() {
@@ -116,5 +118,9 @@ export default {
 .youAreWrong {
   font-weight: bold;
   color: red;
+}
+.correctAnswer{
+  border: solid 2px green;
+  margin: 2px;
 }
 </style>
