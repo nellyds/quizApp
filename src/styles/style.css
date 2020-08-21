@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,100&family=Source+Code+Pro:ital,wght@0,200;0,400;0,900;1,200&display=swap');
+#app{
+    font-family: 'Source Code Pro';
+}
+.correct{
+  border: solid 3px green;
+  margin: 10px;
+}
+.wrong{
+  border: solid 3px red;
+  margin: 10px;
+}
+.empty{
+  border: solid 3px yellow;
+  margin: 10px;
+}
+
+@media screen and (max-width: 415px){
+  .pageView{
+
+    margin: 15px;
+    flex-direction: column;
+  }
+  .questionForm{
+    width: 90%;
+    padding: 10px;
+    text-align: right;
+    margin-right: 10px;
+  }
+
+}
+@media screen and (min-width: 416px){
+  .pageView{
+    width: 800px;
+    margin: 20px;
+    flex-direction: column;
+  }
+  .questionForm{
+    width: 800px;
+  padding: 20px;
+}
+.formBody{
+  min-height: 450px;
+}
+
+}

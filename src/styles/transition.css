@@ -1,0 +1,132 @@
+.slideDown-enter {
+    transform: translateY(-1500px);
+  }
+  .slideDown-enter-to {
+    transform: translateY(0px);
+  }
+  .slideDown-enter-active {
+    transition: transform 900ms ease-in-out;
+  }
+  .slideDown-leave {
+    transform: translateY(0px);
+  }
+  .slideDown-leave-to {
+    transform: translateY(-1500px);
+  }
+  .slideDown-leave-active {
+    transition: transform 600ms ease-in-out;
+  }
+
+  .slideUp-enter {
+    transform: translateY(1500px);
+  }
+  .slideUp-enter-to {
+    transform: translateY(0px);
+  }
+  .slideUp-enter-active {
+    transition: transform 900ms ease-in-out;
+  }
+  .slideUp-leave {
+    transform: translateY(0px);
+  }
+  .slideUp-leave-to {
+    transform: translateY(1500px);
+  }
+  .slideUp-leave-active {
+    transition: transform 600ms ease-in-out;
+  }
+
+  .slideLeft-enter{
+      transform: translateX(-800px);
+  }
+  .slideLeft-enter-to{
+      transform: translateX(0px)
+  }
+  .slideLeft-enter-active {
+      transition: transform 900ms ease-in-out;
+  }
+  .slideLeft-leave {
+      transform: translateX(0px);
+  }
+  .slideLeft-leave-to{
+      transform: translateX(-800px)
+  }
+  .slideLeft-leave-active{
+      transition: transform 600ms ease-in-out
+  }
+
+  .slideRight-enter{
+    transform: translateX(1500px)
+  }
+  .slideRight-enter-to{
+    transform: translateX(0px)
+  }
+  .slideRight-enter-active{
+    transition: transform 900ms ease-in-out
+  }
+  .slideRight-leave{
+    transform: translateX(0px)
+  }
+  .slideRight-leave-to{
+    transform: translateX(1500px)
+  }
+  .slideRight-leave-active{
+    transition: transform 600ms ease-in-out
+  }
+
+  .slideOver-enter{
+    transform: translateX( 2000px)
+  }
+  .slideOver-enter-to{
+    transform: translateX(0px)
+  }
+  .slideOver-enter-active{
+    transition: transform 900ms ease-in-out
+  }
+  .slideOver-leave{
+    transform: translateX(0px)
+  }
+  .slideOver-leave-to{
+    transform: translateX(2000px)
+  }
+  .slideOver-leave-active{
+    transition: transform 900ms ease-in-out
+  }
+
+  .reveal-holder {
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .reveal-holder-large{
+    width: 1000px;
+
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  .reveal-block-white{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 101%;
+    background: rgba(255,255,255,1)
+  }
+  .reveal-block-black{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 101%;
+    background: black;
+  }
+  [data-aos="reveal-right"] {
+    transform: scaleX(1);
+    transform-origin: 100% 0%;
+    transition-property: transform;
+    transition-delay: 0.5s;
+  }
+  [data-aos="reveal-right"].aos-animate {
+    transform: scaleX(0);
+  }

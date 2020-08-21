@@ -1,0 +1,36 @@
+{
+ "quotes":    [
+        {
+            "quote": "It was the best of times, it was the...blurst of times???",
+            "person": "Mr. Burns"
+        },
+        {
+            "quote": "We got beets",
+            "person": "Lisa Simpson"
+        },
+        {
+            "quote": "I just think they are neat.",
+            "person": "Marge Simpson"
+        },
+        {
+            "quote": "Communism works Marge, in theory.",
+            "person": "Homer Simpson"
+        },
+        {
+            "quote":"Do you know what Mr. Smart-mouth called me as he stormed out this morning? A honky!",
+            "person": "Doc Venture"
+        },
+        {
+            "quote": "I'm out of gun food.",
+            "person": "Hank Venture"
+        },
+        {
+            "quote": "Well, I've heard him call me 'Dave' or 'Don' a few times, but I don't think they're nicknames",
+            "person": "Dean Venture"
+        },
+        {
+            "quote": "Au Contraire! I am Tony Danza to your spunky Alyssa Milano! I am full-on-Charles-in-charge of you! You are my unit.",
+            "person": "Sgt. Hatred"
+        }
+    ]
+}
