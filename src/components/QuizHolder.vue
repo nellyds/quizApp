@@ -1,7 +1,10 @@
 <template>
   <div>
     <v-card class="quizHolder" color="white">
-      <p>How many quotes by cartoon characters from a *wide variety of show can you identify?</p>
+      <p>
+        How many quotes by cartoon characters from a *wide variety of show can
+        you identify?
+      </p>
       <!-- the score handler will only be visible once the quiz has been graded -->
       <ScoreHandler />
       <div>
@@ -103,7 +106,7 @@ export default {
           type: "setQuizLength",
           data: this.selectedQuizLength
         });
-      //the list of possible questions is made by randomly picking numbers from the list of questions, duplicates are prevented by checking if the question list already contains the question
+        //the list of possible questions is made by randomly picking numbers from the list of questions, duplicates are prevented by checking if the question list already contains the question
         let i = this.quizLength;
         while (i > 0) {
           let num = Math.floor(
