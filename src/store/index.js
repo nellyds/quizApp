@@ -5,13 +5,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    quotes: quiz.quotes,
+    questions: quiz.questions,
     graded: false,
     errors: [],
     correctAnswer: [],
     submittedQuestions: [],
     incompleteQuestions: [],
-    quizLength: null
+    quizLength: 0
   },
   mutations: {
     submitAnswers() {

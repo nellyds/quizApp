@@ -1,46 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,100&family=Source+Code+Pro:ital,wght@0,200;0,400;0,900;1,200&display=swap');
 #app{
     font-family: 'Source Code Pro';
+    background-color: rgba(0,0,0,.05)
 }
-.correct{
-  border: solid 3px green;
-  margin: 10px;
+.quizHolder{
+  padding: 10px;
 }
-.wrong{
-  border: solid 3px red;
-  margin: 10px;
-}
-.empty{
-  border: solid 3px yellow;
-  margin: 10px;
-}
+
 
 @media screen and (max-width: 415px){
   .pageView{
-
     margin: 15px;
     flex-direction: column;
   }
   .questionForm{
-    width: 90%;
     padding: 10px;
     text-align: right;
-    margin-right: 10px;
+  }
+  .correct{
+    border: solid 3px green;
+    margin: 10px;
+  }
+  .wrong{
+    border: solid 3px red;
+    margin: 10px;
+  }
+  .empty{
+    border: solid 3px yellow;
+    margin: 10px;
   }
 
+.youAreCorrect {
+  font-weight: bold;
+  color: green;
+
+  margin-right: 10px;
+}
+.youAreWrong {
+  font-weight: bold;
+  color: red;
+
+  margin-right: 10px;
+}
+.correctAnswer {
+  border: solid 2px green;
+  margin: 2px;
+}
 }
 @media screen and (min-width: 416px){
   .pageView{
-    width: 800px;
-    margin: 20px;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 20px;
     flex-direction: column;
   }
   .questionForm{
-    width: 800px;
   padding: 20px;
 }
 .formBody{
   min-height: 450px;
 }
+.correct{
+  border: solid 3px green;
+  width: 70%;
+  margin: 10px;
+}
+.wrong{
+  border: solid 3px red;
+  width: 70%;
+  margin: 10px;
+}
+.empty{
+  border: solid 3px yellow;
+  width: 70%;
+  margin: 10px;
+}
 
+.youAreCorrect {
+  font-weight: bold;
+  color: green;
+  text-align: right;
+  margin-right: 10px;
+}
+.youAreWrong {
+  font-weight: bold;
+  color: red;
+  text-align: right;
+  margin-right: 10px;
+}
+.correctAnswer {
+  border: solid 2px green;
+  margin: 2px;
+}
 }

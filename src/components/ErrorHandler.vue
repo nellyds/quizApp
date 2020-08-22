@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- component only visible when there have been caught errors -->
     <transition name="slideRight">
       <div v-if="errors.length > 0">
         <div v-for="(error, i) in errors" v-bind:key="i">
@@ -22,6 +23,7 @@
 <script>
 export default {
   methods: {
+    //clears errors from vuex state object
     clear: function() {
       this.$store.dispatch({ type: "clearErrors" });
     }

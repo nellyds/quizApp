@@ -1,36 +1,179 @@
 {
- "quotes":    [
+ "questions":    [
         {
             "quote": "It was the best of times, it was the...blurst of times???",
-            "person": "Mr. Burns"
+            "answer": "Mr. Burns", 
+            "choices": [
+                "Mr. Burns",
+                "Lisa Simpsons",
+                "Moe Syzlack",
+                "Maude Flanders"
+            ]
         },
         {
             "quote": "We got beets",
-            "person": "Lisa Simpson"
+            "answer": "Lisa Simpson",
+            "choices": [
+                "Barney Gumble",
+                "Benovan Stanciano",
+                "Ruth Powers",
+                "Lunch Lady Doris",
+                "Lisa Simpson"
+            ]
         },
         {
             "quote": "I just think they are neat.",
-            "person": "Marge Simpson"
+            "answer": "Marge Simpson",
+            "choices":[
+                "Hans MoleMan",
+                "Edna Krabapple",
+                "Superintendent Chaulmers",
+                "Marge Simpson",
+                "Agnes Skinner"
+            ]
         },
         {
             "quote": "Communism works Marge, in theory.",
-            "person": "Homer Simpson"
+            "answer": "Homer Simpson",
+            "choices": [
+                "Ned Flanders",
+                "Krusty the Klown",
+                "Sideshow Mel",
+                "Homer Simpson",
+                "Otto"
+            ]
         },
         {
-            "quote":"Do you know what Mr. Smart-mouth called me as he stormed out this morning? A honky!",
-            "person": "Doc Venture"
+            "quote": "As was the style at the time...",
+            "answer": "Grandpa Simpson",
+            "choices":[
+                "Mona Simpson",
+                "Mr. Burns",
+                "Mona Flanders",
+                "Bee Scruggins",
+                "Grandpa Simpson"
+            ]
         },
         {
-            "quote": "I'm out of gun food.",
-            "person": "Hank Venture"
+            "quote": "Hey fatty, I got a film for you, a fridge too far!",
+            "answer": "that guy who sounds like Charles Bronson",
+            "choices":[
+                "that guy who sounds like Charles Bronson",
+                "Krusty the Klown",
+                "Kent Brockman",
+                "Nelson Muntz"
+            ]
         },
         {
-            "quote": "Well, I've heard him call me 'Dave' or 'Don' a few times, but I don't think they're nicknames",
-            "person": "Dean Venture"
+            "quote": "I sleep in a drawer",
+            "answer": "Kearney jr.",
+            "choices":[
+                "Nelson Muntz",
+                "Rod Flanders",
+                "Ralph Wiggum",
+                "Kearney jr."
+            ]
         },
         {
-            "quote": "Au Contraire! I am Tony Danza to your spunky Alyssa Milano! I am full-on-Charles-in-charge of you! You are my unit.",
-            "person": "Sgt. Hatred"
+            "quote": "HOT DAMN I'M GOING TO SEA WORLD!",
+            "answer": "Troy McClure",
+            "choices":[
+                "Patty Bouvieau",
+                "Bob Terwilliger",
+                "Troy McClure",
+                "Sideshow Luke Perry"
+            ]
+        },
+        {
+            "quote": "Did you just call me a liar?",
+            "answer": "Principal Skinner",
+            "choices":[
+                "Principal Skinner",
+                "Ned Flanders",
+                "Gil",
+                "Snake"
+            ]
+        },
+        {
+            "quote": "Bart quit his job and joined a violence gang!",
+            "answer": "Marge Simpson",
+            "choices": [
+                "Homer Simpson",
+                "Maude Flanders",
+                "Ned Flanders",
+                "Marge Simpson"
+            ]
+        },
+        {
+            "quote": "Save me from the wee turtles!",
+            "answer": "Groundskeeper Willie",
+            "choices":[
+                "Chief Wiggum",
+                "GroundskeeperWillie",
+                "Otto",
+                "Lennie"
+            ]
+        },
+        {
+            "quote": "Ow my eye!  I am not supposed to get things in it!",
+            "answer": "Lennie",
+            "choices":[
+                "Lennie",
+                "Carl",
+                "Benovan Stanciano",
+                "Duff Man"
+            ]
+        },
+        {
+            "quote": "I live above a bowling alley and below another bowling alley",
+            "answer": "Hank Grimes",
+            "choices": [
+                "Ned Flanders",
+                "Moe Syzlak",
+                "Frank Grimes",
+                "Apu Nehasapemapetalan"
+            ]
+        },
+        {
+            "quote": "Hey, those aren't your rats",
+            "answer": "Moe Syzlak",
+            "choices":[
+                "Lennie",
+                "Homer Simpson",
+                "Roy",
+                "Moe Syzlak"
+            ]
+        },
+        {
+            "quote": "Right On Mr. S",
+            "answer": "Roy",
+            "choices":[
+                "Roy",
+                "Donnie",
+                "Benovan Stanciano",
+                "Uter"
+            ]
+        },
+        {
+            "quote": "I see lots of things",
+            "answer": "Donnie of Donnie's Discount Gas",
+            "choices": [
+                "Donnie of Donnie's Discount Gas",
+                "Benovan Stanciano",
+                "Squaky Voiced Teen",
+                "Hans Moleman"
+            ]
+        },
+        {
+            "quote": "The new issue of Sponge and Vaccuum is in",
+            "answer": "Benovan Stanciano",
+            "choices": [
+                "Donnie",
+                "Frank Grimes",
+                "Squeaky Voiced Teen",
+                "Apu Nehasapemapetalan",
+                "Benovan Stanciano"
+            ]
         }
     ]
 }
