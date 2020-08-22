@@ -46,7 +46,7 @@ export default {
   data() {
     return {
       selectedQuizLength: null,
-      quizLengthOptions: [1, 5, 10, 15],
+      quizLengthOptions: [1, 5, 10],
       submittedAnswers: [],
       questionNumbers: []
     };
