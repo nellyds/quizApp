@@ -109,7 +109,7 @@
             "answer": "Groundskeeper Willie",
             "choices":[
                 "Chief Wiggum",
-                "GroundskeeperWillie",
+                "Groundskeeper Willie",
                 "Otto",
                 "Lennie"
             ]
@@ -126,7 +126,7 @@
         },
         {
             "quote": "I live above a bowling alley and below another bowling alley",
-            "answer": "Hank Grimes",
+            "answer": "Frank Grimes",
             "choices": [
                 "Ned Flanders",
                 "Moe Syzlak",
