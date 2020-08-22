@@ -103,10 +103,7 @@ export default {
           type: "setQuizLength",
           data: this.selectedQuizLength
         });
-        // for (let i=0; i < this.quizLength; i++){
-        //       let num = Math.floor(Math.random() * this.$store.state.questions.length)
-        //       this.questionNumbers.push(num)
-        // }
+      //the list of possible questions is made by randomly picking numbers from the list of questions, duplicates are prevented by checking if the question list already contains the question
         let i = this.quizLength;
         while (i > 0) {
           let num = Math.floor(
