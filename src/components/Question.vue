@@ -57,8 +57,8 @@ export default {
   },
   methods: {
     getQuestion: function() {
-      let num = Math.floor(Math.random() * this.$store.state.questions.length);
-      this.question = this.$store.state.questions[num];
+     
+      this.question = this.$store.state.questions[this.questionNumber];
     },
     setQuestion: function() {
       this.quote = this.question.quote;
