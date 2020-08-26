@@ -22,7 +22,7 @@ export default new Vuex.Store({
     },
     storeError(state, payload) {
       console.log(payload);
-      this.state.errors.push(payload.error);
+      this.state.errors.push(payload.message);
     },
     clearErrors() {
       this.state.errors = [];
@@ -41,7 +41,7 @@ export default new Vuex.Store({
     },
     setQuizLength(state, payload) {
       this.state.quizLength = payload.data;
-    }
+    },
   },
   actions: {
     resetQuiz(context) {
@@ -57,6 +57,10 @@ export default new Vuex.Store({
     clearErrors(context) {
       context.commit("clearErrors");
       context.commit("clearIncompleteQuestions");
+    },
+    submitError(context, payload) {
+      console.log(payload);
+      context.commit({ type: "storeError", message: payload.message });
     }
   },
   modules: {}

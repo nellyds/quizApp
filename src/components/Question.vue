@@ -1,22 +1,19 @@
 <template>
   <div
-    style="margin: 10px;"
+    style="margin: 10px; background-color: white; border-radius: 15px;"
     v-bind:class="{ correct: isCorrect, wrong: isWrong, empty: isIncomplete }"
   >
-    <v-card color="white" :id="quizItemNumber" class="questionForm">
+    <div class="questionForm">
       <p style=" text-align: left;">
-        <span style="font-weight: bold;">{{ quizItemNumber + 1 }}</span>
+        <span class="quizNumber"> {{ quizItemNumber + 1 }}. </span>
         {{ quote }}
       </p>
-      <v-radio-group v-model="radioValue">
-        <div
-          v-for="(choice, i) in choices"
-          v-bind:id="choice + quizItemNumber"
-          :key="i"
-        >
-          <v-radio :label="choice" :value="choice"></v-radio>
+      <div class="quizChoices" v-for="(choice, i) in choices" v-bind:key="i">
+        <div v-bind:id="choice + quizItemNumber">
+          <input type="radio" v-bind:value="choice" v-model="radioValue" />
+          <label style="margin-left: 8px;">{{ choice }}</label>
         </div>
-      </v-radio-group>
+      </div>
       <p
         class="youAreCorrect"
         data-aos="fade-left"
@@ -33,7 +30,7 @@
       >
         Wrong
       </p>
-    </v-card>
+    </div>
   </div>
 </template>
 <script>
@@ -57,7 +54,6 @@ export default {
   },
   methods: {
     getQuestion: function() {
-     
       this.question = this.$store.state.questions[this.questionNumber];
     },
     setQuestion: function() {
@@ -66,7 +62,10 @@ export default {
       this.choices = this.question.choices;
     },
     markIncomplete: function() {
-      this.isIncomplete = true;
+      // this.isIncomplete = true;
+      if (this.isIncomplete === false){
+        this.isIncomplete = true;
+      }
     }
   },
   mounted() {
@@ -103,9 +102,8 @@ export default {
         } else {
           this.isWrong = true;
           //if an the user supplied answer was incorrect, the correct answer item receives a green border
-          document.getElementById(this.answerName + this.quizItemNumber).style[
-            "border"
-          ] = "solid 2px green";
+          let id = this.answerName + this.quizItemNumber;
+          document.getElementById(id).classList.add("wrongAnswer")
         }
       }
     },
@@ -114,8 +112,17 @@ export default {
       if (this.incompleteQuestions.includes(this.quizItemNumber)) {
         this.markIncomplete();
       }
-    }
+    },
   }
 };
 </script>
-<style scoped></style>
+<style scoped>
+.wrongAnswer{
+  padding: 5px;
+  border: 1px black solid;
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+}
+
+</style>

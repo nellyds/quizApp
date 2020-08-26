@@ -4,18 +4,10 @@
     <transition name="slideRight">
       <div v-if="errors.length > 0">
         <div v-for="(error, i) in errors" v-bind:key="i">
-          <p>{{ error }}</p>
-          <v-alert
-            data-aos="fade-left"
-            data-aos-duration="500"
-            dense
-            type="error"
-            >{{ error }}
-          </v-alert>
+          <p @click="clear" style="color: red; text-align: center;">
+            {{ error }}
+          </p>
         </div>
-        <v-btn @click="clear" outlined color="red"
-          >Ok, I will do better next time
-        </v-btn>
       </div>
     </transition>
   </div>
