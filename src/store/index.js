@@ -41,7 +41,7 @@ export default new Vuex.Store({
     },
     setQuizLength(state, payload) {
       this.state.quizLength = payload.data;
-    },
+    }
   },
   actions: {
     resetQuiz(context) {

@@ -45,8 +45,8 @@ export default {
 };
 </script>
 <style scoped>
-.result{
-  font-weight: bold; 
+.result {
+  font-weight: bold;
   text-decoration: underline;
 }
 p {

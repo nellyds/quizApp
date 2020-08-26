@@ -1,16 +1,18 @@
 <template>
   <div>
     <p class="appHeader">
-      How many quotes by cartoon characters from a *wide variety of show can you
+      How many quotes by cartoon characters from a wide variety of show can you
       identify?
     </p>
     <!-- the score handler will only be visible once the quiz has been graded -->
     <ScoreHandler />
-    <div>
+    <div style="width: 350px;">
       <!-- the user selects how many questions will be in the quiz   -->
       <v-select v-model="selectedQuizLength" :items="quizLengthOptions" />
-      <v-btn outlined @click="populateQuiz">Make Quiz</v-btn>
-      <v-btn @click="resetQuiz" outlined>Reset Quiz</v-btn>
+      <!-- <v-btn outlined @click="populateQuiz">Make Quiz</v-btn>
+      <v-btn @click="resetQuiz" outlined>Reset Quiz</v-btn> -->
+      <button class="submitButton" @click="populateQuiz"> Start Quiz</button>
+      <button class="submitButton" @click="resetQuiz" >Reset Quiz</button>
     </div>
 
     <transition name="slideRight">
@@ -27,9 +29,9 @@
       </div>
     </transition>
     <div class="buttonHolder">
-    <button class="submitButton" @click="submitAnswers" color="green">
-      Submit
-    </button>
+      <button class="submitButton" @click="submitAnswers">
+        Submit
+      </button>
     </div>
     <ErrorHandler />
   </div>
@@ -84,7 +86,7 @@ export default {
     },
     validateAllQuestionsFilled: function() {
       //clear any existing error messages before submitting quiz for grading
-      this.$store.dispatch({type: 'clearErrors'})
+      this.$store.dispatch({ type: "clearErrors" });
       //check the array of submitted answers to include all questions,  append unanswered questions to the vuex state object
       for (let i = 0; i < this.quizLength; i++) {
         if (!this.submittedAnswers.includes(i)) {
@@ -126,6 +128,4 @@ export default {
   }
 };
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

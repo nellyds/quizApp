@@ -63,7 +63,7 @@ export default {
     },
     markIncomplete: function() {
       // this.isIncomplete = true;
-      if (this.isIncomplete === false){
+      if (this.isIncomplete === false) {
         this.isIncomplete = true;
       }
     }
@@ -103,7 +103,7 @@ export default {
           this.isWrong = true;
           //if an the user supplied answer was incorrect, the correct answer item receives a green border
           let id = this.answerName + this.quizItemNumber;
-          document.getElementById(id).classList.add("wrongAnswer")
+          document.getElementById(id).classList.add("wrongAnswer");
         }
       }
     },
@@ -112,17 +112,16 @@ export default {
       if (this.incompleteQuestions.includes(this.quizItemNumber)) {
         this.markIncomplete();
       }
-    },
+    }
   }
 };
 </script>
 <style scoped>
-.wrongAnswer{
+.wrongAnswer {
   padding: 5px;
   border: 1px black solid;
   background-color: green;
   color: white;
   border-radius: 3px;
 }
-
 </style>
