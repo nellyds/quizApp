@@ -1,20 +1,18 @@
 <template>
   <div>
-    <p class="appHeader">
-      How many quotes by cartoon characters from a wide variety of show can you
-      identify?
-    </p>
-    <!-- the score handler will only be visible once the quiz has been graded -->
-    <ScoreHandler />
-    <div style="width: 350px;">
-      <!-- the user selects how many questions will be in the quiz   -->
-      <v-select v-model="selectedQuizLength" :items="quizLengthOptions" />
-      <!-- <v-btn outlined @click="populateQuiz">Make Quiz</v-btn>
-      <v-btn @click="resetQuiz" outlined>Reset Quiz</v-btn> -->
-      <button class="submitButton" @click="populateQuiz"> Start Quiz</button>
-      <button class="submitButton" @click="resetQuiz" >Reset Quiz</button>
-    </div>
-
+    <v-card class="quizHolder" color="white">
+      <p>
+       Test your knowledge of some of the great musicians of the last century*.
+      </p>
+      <!-- the score handler will only be visible once the quiz has been graded -->
+      <ScoreHandler />
+      <div>
+        <!-- the user selects how many questions will be in the quiz   -->
+        <v-select v-model="selectedQuizLength" :items="quizLengthOptions" />
+        <v-btn outlined @click="populateQuiz">Make Quiz</v-btn>
+        <v-btn @click="resetQuiz" outlined>Reset Quiz</v-btn>
+      </div>
+    </v-card>
     <transition name="slideRight">
       <div v-if="quizLength > 0">
         <!-- the question list will only be rendered once the user has entered the number of questions they want in the quiz -->
@@ -28,11 +26,9 @@
         />
       </div>
     </transition>
-    <div class="buttonHolder">
-      <button class="submitButton" @click="submitAnswers">
-        Submit
-      </button>
-    </div>
+    <v-card class="quizHolder" color="white">
+      <v-btn @click="submitAnswers" outlined>Submit</v-btn>
+    </v-card>
     <ErrorHandler />
   </div>
 </template>
@@ -67,10 +63,9 @@ export default {
     submitAnswers: function() {
       //confirms that all questions have had an answer entered and submits quiz for correction
       if (!this.validateAllQuestionsFilled()) {
-        this.$store.dispatch({
-          type: "submitError",
-          message:
-            "Answer all questions.  Unanswered questions are displayed in yellow."
+        this.$store.commit({
+          type: "storeError",
+          error: "Not all questions filled out"
         });
       } else {
         this.$store.commit({
@@ -85,8 +80,6 @@ export default {
       }
     },
     validateAllQuestionsFilled: function() {
-      //clear any existing error messages before submitting quiz for grading
-      this.$store.dispatch({ type: "clearErrors" });
       //check the array of submitted answers to include all questions,  append unanswered questions to the vuex state object
       for (let i = 0; i < this.quizLength; i++) {
         if (!this.submittedAnswers.includes(i)) {

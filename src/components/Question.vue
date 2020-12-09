@@ -1,19 +1,22 @@
 <template>
   <div
-    style="margin: 10px; background-color: white; border-radius: 15px;"
+    style="margin: 10px;"
     v-bind:class="{ correct: isCorrect, wrong: isWrong, empty: isIncomplete }"
   >
-    <div class="questionForm">
+    <v-card color="white" :id="quizItemNumber" class="questionForm">
       <p style=" text-align: left;">
-        <span class="quizNumber"> {{ quizItemNumber + 1 }}. </span>
+        <span style="font-weight: bold;">{{ quizItemNumber + 1 }}</span>
         {{ quote }}
       </p>
-      <div class="quizChoices" v-for="(choice, i) in choices" v-bind:key="i">
-        <div v-bind:id="choice + quizItemNumber">
-          <input type="radio" v-bind:value="choice" v-model="radioValue" />
-          <label style="margin-left: 8px;">{{ choice }}</label>
+      <v-radio-group v-model="radioValue">
+        <div
+          v-for="(choice, i) in choices"
+          v-bind:id="choice + quizItemNumber"
+          :key="i"
+        >
+          <v-radio :label="choice" :value="choice"></v-radio>
         </div>
-      </div>
+      </v-radio-group>
       <p
         class="youAreCorrect"
         data-aos="fade-left"
@@ -30,7 +33,7 @@
       >
         Wrong
       </p>
-    </div>
+    </v-card>
   </div>
 </template>
 <script>
@@ -54,23 +57,33 @@ export default {
   },
   methods: {
     getQuestion: function() {
-      this.question = this.$store.state.questions[this.questionNumber];
+      this.question = this.$store.state.people[this.questionNumber];
     },
     setQuestion: function() {
-      this.quote = this.question.quote;
-      this.answerName = this.question.answer;
-      this.choices = this.question.choices;
+      this.quote = this.question.person;
+      this.answerName = this.question.band;
     },
     markIncomplete: function() {
-      // this.isIncomplete = true;
-      if (this.isIncomplete === false) {
-        this.isIncomplete = true;
+      this.isIncomplete = true;
+    },
+    getChoices: function() {
+      let choices = [];
+      let bands = this.$store.state.bands;
+      while (choices.length < 4) {
+        let num = Math.floor(
+          Math.random() * bands.length);
+        if (!choices.includes(bands[num])) {
+          choices.push(bands[num]);
+        }
       }
+      if (!choices.includes(this.answerName)) choices.push(this.answerName);
+      this.choices = choices;
     }
   },
   mounted() {
     this.getQuestion();
     this.setQuestion();
+    this.getChoices();
   },
   computed: {
     graded: function() {
@@ -102,8 +115,9 @@ export default {
         } else {
           this.isWrong = true;
           //if an the user supplied answer was incorrect, the correct answer item receives a green border
-          let id = this.answerName + this.quizItemNumber;
-          document.getElementById(id).classList.add("wrongAnswer");
+          document.getElementById(this.answerName + this.quizItemNumber).style[
+            "border"
+          ] = "solid 2px green";
         }
       }
     },
@@ -116,12 +130,4 @@ export default {
   }
 };
 </script>
-<style scoped>
-.wrongAnswer {
-  padding: 5px;
-  border: 1px black solid;
-  background-color: green;
-  color: white;
-  border-radius: 3px;
-}
-</style>
+<style scoped></style>

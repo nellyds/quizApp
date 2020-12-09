@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div class="scoreHandler" v-if="graded">
+    <div v-if="graded">
       <!-- score is only displayed after the quiz has been graded -->
-      <p class="result">Results</p>
       <p data-aos="fade-left" data-aos-duration="500">
         You got {{ correctAnswer }} / {{ quizLength }} correct.
       </p>
@@ -45,10 +44,6 @@ export default {
 };
 </script>
 <style scoped>
-.result {
-  font-weight: bold;
-  text-decoration: underline;
-}
 p {
   text-align: center;
 }

@@ -6,6 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     questions: quiz.questions,
+    bands: null,
+    people: quiz.people,
     graded: false,
     errors: [],
     correctAnswer: [],
@@ -22,7 +24,7 @@ export default new Vuex.Store({
     },
     storeError(state, payload) {
       console.log(payload);
-      this.state.errors.push(payload.message);
+      this.state.errors.push(payload.error);
     },
     clearErrors() {
       this.state.errors = [];
@@ -41,6 +43,9 @@ export default new Vuex.Store({
     },
     setQuizLength(state, payload) {
       this.state.quizLength = payload.data;
+    },
+    setBands(state, payload) {
+      this.state.bands = payload.bands
     }
   },
   actions: {
@@ -58,9 +63,13 @@ export default new Vuex.Store({
       context.commit("clearErrors");
       context.commit("clearIncompleteQuestions");
     },
-    submitError(context, payload) {
-      console.log(payload);
-      context.commit({ type: "storeError", message: payload.message });
+    getBands(context) {
+      let bandList = new Set();
+      this.state.people.map((d) => bandList.add(d.band))
+      context.commit({
+        type: "setBands",
+        bands: [...bandList] 
+      })
     }
   },
   modules: {}

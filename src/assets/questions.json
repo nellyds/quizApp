@@ -1,8 +1,8 @@
 {
- "questions":    [
+    "questions": [
         {
             "quote": "It was the best of times, it was the...blurst of times???",
-            "answer": "Mr. Burns", 
+            "answer": "Mr. Burns",
             "choices": [
                 "Mr. Burns",
                 "Lisa Simpsons",
@@ -24,7 +24,7 @@
         {
             "quote": "I just think they are neat.",
             "answer": "Marge Simpson",
-            "choices":[
+            "choices": [
                 "Hans MoleMan",
                 "Edna Krabapple",
                 "Superintendent Chaulmers",
@@ -46,7 +46,7 @@
         {
             "quote": "As was the style at the time...",
             "answer": "Grandpa Simpson",
-            "choices":[
+            "choices": [
                 "Mona Simpson",
                 "Mr. Burns",
                 "Mona Flanders",
@@ -57,7 +57,7 @@
         {
             "quote": "Hey fatty, I got a film for you, a fridge too far!",
             "answer": "that guy who sounds like Charles Bronson",
-            "choices":[
+            "choices": [
                 "that guy who sounds like Charles Bronson",
                 "Krusty the Klown",
                 "Kent Brockman",
@@ -67,7 +67,7 @@
         {
             "quote": "I sleep in a drawer",
             "answer": "Kearney jr.",
-            "choices":[
+            "choices": [
                 "Nelson Muntz",
                 "Rod Flanders",
                 "Ralph Wiggum",
@@ -77,7 +77,7 @@
         {
             "quote": "HOT DAMN I'M GOING TO SEA WORLD!",
             "answer": "Troy McClure",
-            "choices":[
+            "choices": [
                 "Patty Bouvieau",
                 "Bob Terwilliger",
                 "Troy McClure",
@@ -87,7 +87,7 @@
         {
             "quote": "Did you just call me a liar?",
             "answer": "Principal Skinner",
-            "choices":[
+            "choices": [
                 "Principal Skinner",
                 "Ned Flanders",
                 "Gil",
@@ -107,7 +107,7 @@
         {
             "quote": "Save me from the wee turtles!",
             "answer": "Groundskeeper Willie",
-            "choices":[
+            "choices": [
                 "Chief Wiggum",
                 "Groundskeeper Willie",
                 "Otto",
@@ -117,7 +117,7 @@
         {
             "quote": "Ow my eye!  I am not supposed to get things in it!",
             "answer": "Lennie",
-            "choices":[
+            "choices": [
                 "Lennie",
                 "Carl",
                 "Benovan Stanciano",
@@ -133,47 +133,172 @@
                 "Frank Grimes",
                 "Apu Nehasapemapetalan"
             ]
+        }
+    ],
+    "people": [
+        {
+            "person": "Shifty",
+            "band": "CrazyTown"
         },
         {
-            "quote": "Hey, those aren't your rats",
-            "answer": "Moe Syzlak",
-            "choices":[
-                "Lennie",
-                "Homer Simpson",
-                "Roy",
-                "Moe Syzlak"
-            ]
+            "person": "Epic",
+            "band": "CrazyTown"
         },
         {
-            "quote": "Right On Mr. S",
-            "answer": "Roy",
-            "choices":[
-                "Roy",
-                "Donnie",
-                "Benovan Stanciano",
-                "Uter"
-            ]
+            "person": "R1ckOne",
+            "band": "CrazyTown"
         },
         {
-            "quote": "I see lots of things",
-            "answer": "Donnie of Donnie's Discount Gas",
-            "choices": [
-                "Donnie of Donnie's Discount Gas",
-                "Benovan Stanciano",
-                "Squaky Voiced Teen",
-                "Hans Moleman"
-            ]
+            "person": "Deadsie",
+            "band": "CrazyTown"
         },
         {
-            "quote": "The new issue of Sponge and Vaccuum is in",
-            "answer": "Benovan Stanciano",
-            "choices": [
-                "Donnie",
-                "Frank Grimes",
-                "Squeaky Voiced Teen",
-                "Apu Nehasapemapetalan",
-                "Benovan Stanciano"
-            ]
+            "person": "Dax",
+            "band": "CrazyTown"
+        },
+        {
+            "person": "DJ Adam 12",
+            "band": "CrazyTown"
+        },
+        {
+            "person": "DJ AM",
+            "band": "CrazyTown"
+        },
+        {
+            "person": "Xero",
+            "band": "Static-X"
+        },
+        {
+            "person": "Andy the Kid",
+            "band": "Static-X"
+        },
+        {
+            "person": "Wayne Static",
+            "band": "Static-X"
+        },
+        {
+            "person": "Tortilla Man",
+            "band": "SlipKnot"
+        },
+        {
+            "person": "133",
+            "band": "SlipKnot"
+        },
+        {
+            "person": "Marton Veress",
+            "band": "Orgy"
+        },
+        {
+            "person": "DJ Bobby B",
+            "band": "KottonMouth Kings"
+        },
+        {
+            "person": "Saint Dog",
+            "band": "KottonMouth Kings"
+        },
+        {
+            "person": "Mikey Bonez",
+            "band": "KottonMouth Kings"
+        },
+        {
+            "person": "Pakelika",
+            "band": "KottonMouth Kings"
+        },
+        {
+            "person": "M.C.U.D",
+            "band": "(Hed)PE"
+        },
+        {
+            "person": "Chizad",
+            "band": "(Hed)PE"
+        },
+        {
+            "person": "Major Trauma",
+            "band": "(Hed)PE"
+        },
+        {
+            "person": "DJ Product 69",
+            "band": "(Hed)PE"
+        },
+        {
+            "person": "Fieldy",
+            "band": "Korn"
+        },
+        {
+            "person": "Munky",
+            "band": "Korn"
+        },
+        {
+            "person": "Ivy",
+            "band": "Kittie"
+        },
+        {
+            "person": "St1tch",
+            "band": "Mushroomhead"
+        },
+        {
+            "person": "Dr. F",
+            "band": "MushroomHead"
+        },
+        {
+            "person": "Tankx",
+            "band": "MushroomHead"
+        },
+        {
+            "person": "Big Penis",
+            "band": "MushroomHead"
+        },
+        {
+            "person": "Lil Dan",
+            "band": "MushroomHead"
+        },
+        {
+            "person": "J Mann",
+            "band": "MushroomHead"
+        },
+        {
+            "person": "DJ Lethal",
+            "band": "Limp Bizkit"
+        },
+        {
+            "person": "Jacoby Shaddix",
+            "band": "Papa Roach"
+        },
+        {
+            "person": "Spider One",
+            "band": "Powerman 5000"
+        },
+        {
+            "person": " Evan 9",
+            "band": "Powerman 5000"
+        },
+        {
+            "person": "Sci550rs",
+            "band": "Powerman 5000"
+        },
+        {
+            "person": "X51",
+            "band": "Powerman 5000"
+        },
+        {
+            "person": "Siggy 00",
+            "band": "Powerman 5000"
+        },
+        {
+            "person": "Wuv Bernardo",
+            "band": "POD"
+        },
+        {
+            "person": "Uncle Krakker",
+            "band": "Twisted Brown Trucker"
+        },
+        {
+            "person": "P-Nut",
+            "band": "311"
+        },
+        {
+            "person": "Everlast",
+            "band": "La Coka Nostra"
         }
     ]
 }
